@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 #---- Inicio da sessão DESCRIPTION-----#
-Description: Workshop Cloudformation - 200 - Setup feito via Web Console
+Description: Create Basic EC2 
 
 #---- Inicio da sessão PARAMETERS-----#
 Parameters:
@@ -31,12 +31,6 @@ Resources:
           #!/bin/bash
           yum update -y
           sudo amazon-linux-extras install nginx1
-          yum install nginx -y
-          systemctl start nginx
-          systemctl enable nginx
-          echo "Workshop Cloudformation 200" > /usr/share/nginx/html/index.html
-          systemctl restart nginx   
-
 
   WebAppSecurityGroup:
     Type: AWS::EC2::SecurityGroup
